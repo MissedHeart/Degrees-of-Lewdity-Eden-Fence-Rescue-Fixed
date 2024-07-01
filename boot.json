@@ -1,0 +1,49 @@
+{
+  "name": "Eden Fence Rescue Fixed",
+  "version": "1.0.0",
+  "styleFileList": [],
+  "scriptFileList": [],
+  "tweeFileList": [],
+  "imgFileList": [],
+  "additionFile": [
+    "README.md",
+    "game/overworld-plains/loc-livestock/Eden Fence Rescue Origin.txt"
+  ],
+  "addonPlugin": [
+    {
+      "modName": "TweeReplacer",
+      "addonName": "TweeReplacerAddon",
+      "modVersion": "^1.0.0",
+      "params": [
+        {
+          "_comment1": "伊甸农场救援事件恢复——其实就是把被注释掉的代码恢复了，不需要写新代码真是轻松",
+          "passage": "Livestock Field",
+          "findString": "<br> -->\n\t<<elseif !$daily.earSlimeGrassEating",
+          "replaceFile": "game/overworld-plains/loc-livestock/Eden Fence Rescue Origin.txt"
+        }
+      ]
+    }
+  ],
+  "dependenceInfo": [
+    {
+      "modName": "ModLoader",
+      "version": "^2.5.2"
+    },
+    {
+      "modName": "GameVersion",
+      "version": ">=0.4.3.3"
+    },
+    {
+      "modName": "ModLoader DoL ImageLoaderHook",
+      "version": "^2.3.0"
+    },
+    {
+      "modName": "TweeReplacer",
+      "version": ">=1.0.0"
+    },
+    {
+      "modName": "ReplacePatcher",
+      "version": ">=1.0.0"
+    }
+  ]
+}
